@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import HeroSection from './components/HeroSection';
 const Home = () => {
-  
-      return <Wrapper className='home'>Welcome to Rapid Groove
-       Application Home Page</Wrapper>
+      const data = {
+            name:"Rapid Groove",
+      };
 
-  
+      return <HeroSection propsData = {data}/>
 };
 const Wrapper = styled.section`
-
+height: 100vh;
 background-color:${({theme}) => theme.colors.bg};
-width: 20rem;
-height: 20rem;
+
 `;
 
 export default Home
