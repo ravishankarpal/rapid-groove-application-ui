@@ -10,6 +10,11 @@ import SingleProduct from './SingleProduct';
 import ErrorPage from './ErrorPage';
 import {GlobalStyle } from './GlobalStyle'
 import { ThemeProvider } from 'styled-components';
+import Header from './components/Header';
+
+import React, { useEffect } from 'react';
+
+
 const App = () => {
   const theme = {
     colors: {
@@ -38,6 +43,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
   <BrowserRouter>
   <GlobalStyle />
+  <Header />
   <Routes>
     <Route path='/' element ={<Home />} />
     <Route path='/about' element ={<About />} />
